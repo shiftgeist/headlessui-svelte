@@ -1,0 +1,43 @@
+{
+  "name": "@headlessui/svelte",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/headlessui.esm.js",
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiftgeist/headlessui-svelte.git",
+    "directory": "packages/@headlessui-svelte"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "svelte:build": "rollup -c",
+    "playground": "vite serve examples",
+    "playground:build": "NODE_ENV=production vite build examples",
+    "prepublishOnly": "npm run build",
+    "build": "../../scripts/build.sh",
+    "watch": "../../scripts/watch.sh",
+    "test": "../../scripts/test.sh",
+    "lint": "../../scripts/lint.sh"
+  },
+  "peerDependencies": {
+    "svelte": "^3.31.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "rollup": "^2.38.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.31.2",
+    "svelte-preprocess": "^4.6.3"
+  }
+}
